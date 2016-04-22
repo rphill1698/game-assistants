@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.getJSON('http://travellermap.com/data/Deneb/metadata',
+
+                        function (data) {
+                            alert("Started");
+                            alert(JSON.stringify(data));
+
+                            var  tmpJSONData = JSON.(data);
+                            alert("Completed");
+                        });
+            });
+        });
+    </script>
+</head>
+
+<body>
+<button>Send an HTTP POST request to a page and get the result back</button>
+</body>
+</html>
